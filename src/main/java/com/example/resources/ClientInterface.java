@@ -2,7 +2,7 @@ package com.example.resources;
 
 import java.util.List;
 
-public interface KlientInterface<TEntity> {
+public interface ClientInterface<TEntity> {
 
 	public TEntity get(int id);
 	public List<TEntity> getAll();

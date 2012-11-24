@@ -1,5 +1,5 @@
 package com.example.services;
 
-public class Dysk {
+public class Motherboard {
 
 }

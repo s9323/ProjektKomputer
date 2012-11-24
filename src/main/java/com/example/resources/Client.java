@@ -1,13 +1,13 @@
 package com.example.resources;
 
-public class Klient {
+public class Client {
 
 	private int id;
 	private String name;
 	private String surname;
 	private String adress;
 
-	public Klient(String name, String surname, String adress) {
+	public Client(String name, String surname, String adress) {
 		this.name = name;
 		this.surname = surname;
 		this.adress = adress;

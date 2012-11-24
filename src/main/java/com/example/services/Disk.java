@@ -1,5 +1,5 @@
 package com.example.services;
 
-public class Czesci {
+public class Disk {
 
 }

@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DbAdapter implements KlientInterface<Klient> {
+public class DbAdapter implements ClientInterface<Client> {
 
 	Connection conn;
 	private String url = "jdbc:sqlite:Computer.db";
@@ -59,13 +59,13 @@ public class DbAdapter implements KlientInterface<Klient> {
 		}
 	}
 
-	public Klient get(int id) {
+	public Client get(int id) {
 		try {
 
 			getKlientByIdStatement.setInt(1, id);
 			ResultSet rs = getKlientByIdStatement.executeQuery();
 			while (rs.next()) {
-				return new Klient(rs.getString("name"),
+				return new Client(rs.getString("name"),
 						rs.getString("surname"), rs.getString("adress"));
 
 			}
@@ -79,13 +79,13 @@ public class DbAdapter implements KlientInterface<Klient> {
 
 	}
 
-	public List<Klient> getAll() {
-		List<Klient> result = new ArrayList<Klient>();
+	public List<Client> getAll() {
+		List<Client> result = new ArrayList<Client>();
 
 		try {
 			ResultSet rs = getAllKlientStatement.executeQuery();
 			while (rs.next()) {
-				Klient p = new Klient(createTable, createTable, createTable);
+				Client p = new Client(createTable, createTable, createTable);
 				p.setName(rs.getString("name"));
 				p.setSurname(rs.getString("surname"));
 				p.setAdress(rs.getString("adress"));
@@ -100,7 +100,7 @@ public class DbAdapter implements KlientInterface<Klient> {
 		return result;
 	}
 
-	public boolean save(Klient obj) {
+	public boolean save(Client obj) {
 		try {
 			addKlientStatement.setString(1, obj.getName());
 			addKlientStatement.setString(2, obj.getSurname());
@@ -111,7 +111,7 @@ public class DbAdapter implements KlientInterface<Klient> {
 		return false;
 	}
 
-	public boolean delete(Klient obj) {
+	public boolean delete(Client obj) {
 		try {
 			deleteKlientStatement.setString(1, obj.getName());
 			deleteKlientStatement.executeUpdate();
