@@ -25,7 +25,7 @@ public class Client {
 		return surname;
 	}
 
-	public void setSurname(String pesel) {
+	public void setSurname(String surname) {
 		this.surname = surname;
 	}
 
@@ -45,6 +45,12 @@ public class Client {
 	public void setAdress(String adress){
 		this.adress = adress;
 	}
+
+	public void add() {
+				
+	}
+
+	
 
 	
 		
