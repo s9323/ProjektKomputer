@@ -1,45 +1,31 @@
 package com.example.services;
 
-public class RamMemory<T> extends Parts<T>{
+public class Drivers<T> extends Parts<T>{
 	Computer comp;	
-	private String nazwa_karty;
 	private String nazwa_firmy;
 	private int ilosc;
-	private int pojemnosc;
 	private int cena;
-	private int id_pamieci;
+	private int id_stacji;
 	
-	public RamMemory(Computer comp){
+	public Drivers(Computer comp){
 		this.comp = comp;	
 		}	
 	
-	public RamMemory(String nazwa_firmy, int ilosc, int pojemnosc,
+	public Drivers(String nazwa_firmy, int ilosc,
 			int cena) {
 		this.nazwa_firmy = nazwa_firmy;
 		this.ilosc = ilosc;
-		this.pojemnosc = pojemnosc;
 		this.cena = cena;
 	}
 	
 	public int getId() {
-		return id_pamieci;
+		return id_stacji;
 	}
 
-	public void setId(int id_pamieci) {
-		this.id_pamieci = id_pamieci;
+	public void setId(int id_stacji) {
+		this.id_stacji = id_stacji;
 	}
 	
-	
-	
-	public String getNazwa_karty() {
-		return nazwa_karty;
-	}
-
-    public void setNazwa_karty(String nazwa_karty) {
-    	this.nazwa_karty = nazwa_karty;
-		
-	}
-    
     public String getNazwa_firmy() {
 		return nazwa_firmy;
 	}
@@ -56,14 +42,7 @@ public class RamMemory<T> extends Parts<T>{
 		this.ilosc = ilosc;
 		
 	}
-    public int getPojemnosc() {
-		return pojemnosc;
-	}
-    
-    public void setPojemnosc(int pojemnosc) {
-		this.pojemnosc = pojemnosc;
-	}
-
+   
     public int getCena() {
 		return cena;
 	}
@@ -71,12 +50,13 @@ public class RamMemory<T> extends Parts<T>{
     public void setCena(int cena) {
 	  this.cena = cena;
 	}
+    
 	
 	
 	@Override	
 	public String about(String firma) 
 	{
-		return comp.about(firma) + "PAMIEÆ RAM" + firma ;	
+		return comp.about(firma) + "STACJA DYSKÓW" + firma ;	
 	}	
 	
 	public double cena()
@@ -90,13 +70,13 @@ public class RamMemory<T> extends Parts<T>{
 		
 		return false;
 	}
-
-@Override
 	
+	@Override
 	public String toString (){
 		String s="";
-		s+=id_pamieci+" "+nazwa_firmy+" "+ilosc+" "+pojemnosc+" "+cena;
+		s+=id_stacji+" "+nazwa_firmy+" "+ilosc+" "+cena;
 		
 		return s;	
 	}
+
 }

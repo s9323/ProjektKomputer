@@ -50,7 +50,12 @@ public class Client {
 				
 	}
 
-	
+	public String toString (){
+		String s="";
+		s+=id+" "+name+" "+surname+" "+adress;
+		
+		return s;	
+	}
 
 	
 		

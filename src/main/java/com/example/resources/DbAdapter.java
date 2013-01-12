@@ -53,7 +53,7 @@ public class DbAdapter implements ClientInterface<Client> {
 				getKlientByIdStatement = conn
 						.prepareStatement("SELECT * FROM Klient WHERE id=?");
 
-			
+		
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -92,6 +92,7 @@ public class DbAdapter implements ClientInterface<Client> {
 				p.setName(rs.getString("name"));
 				p.setSurname(rs.getString("surname"));
 				p.setAdress(rs.getString("adress"));
+				p.setId(rs.getInt("id"));
 				result.add(p);
 
 			}
