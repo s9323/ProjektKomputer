@@ -36,7 +36,7 @@ public class Main {
 	    DiskManager dm = new DiskManager();
 	    //dm.save(new Disk("Segate", 10, 500, 200));
 	   
-	    System.out.println(dm.search("Segate"));
+	   System.out.println(dm.search("Segate"));
 	    
 	   
 	    DriversManager drm = new DriversManager();
