@@ -107,15 +107,17 @@ public class DbAdapter implements ClientInterface<Client> {
 
 	@Override
 	public boolean save(Client obj) {
+		boolean check = false;
 		try {
 			addKlientStatement.setString(1, obj.getName());
 			addKlientStatement.setString(2, obj.getSurname());
 			addKlientStatement.setString(3, obj.getAdress());
-			return addKlientStatement.execute();
+			addKlientStatement.execute();
+			check = true;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return false;
+		return check;
 	}
 
 	@Override
