@@ -1,0 +1,1 @@
+Projekt dotyczy dodawania, usuwania i przeszukiwania bazy danych sklepu komputerowego.
