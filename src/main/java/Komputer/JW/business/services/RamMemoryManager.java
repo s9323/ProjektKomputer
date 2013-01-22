@@ -66,10 +66,10 @@ public class RamMemoryManager implements ManagerInterface<RamMemory> {
 	}
 
 	@Override
-	public RamMemory get(int id_karty) {
+	public RamMemory get(int id_pamieci) {
 		try {
 
-			getRamByIdStatement.setInt(1, id_karty);
+			getRamByIdStatement.setInt(1, id_pamieci);
 			ResultSet rs = getRamByIdStatement.executeQuery();
 			while (rs.next()) {
 				return new RamMemory(rs.getString("nazwa_firmy"), 

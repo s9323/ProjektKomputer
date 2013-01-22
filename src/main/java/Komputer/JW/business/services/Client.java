@@ -46,10 +46,7 @@ public class Client {
 		this.adress = adress;
 	}
 
-	public void add() {
-				
-	}
-
+	
 	public String toString (){
 		String s="";
 		s+=id+" "+name+" "+surname+" "+adress;

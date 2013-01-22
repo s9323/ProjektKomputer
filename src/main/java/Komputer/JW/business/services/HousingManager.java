@@ -68,10 +68,10 @@ public class HousingManager implements ManagerInterface<Housing> {
 	}
 
 	@Override
-	public Housing get(int id_stacji) {
+	public Housing get(int id_obudowy) {
 		try {
 
-			getObudowaByIdStatement.setInt(1, id_stacji);
+			getObudowaByIdStatement.setInt(1, id_obudowy);
 			ResultSet rs = getObudowaByIdStatement.executeQuery();
 			while (rs.next()) {
 				return new Housing(rs.getString("nazwa_firmy"),

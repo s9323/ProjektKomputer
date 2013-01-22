@@ -66,10 +66,10 @@ public class PowerManager implements ManagerInterface<Power> {
 	}
 
 	@Override
-	public Power get(int id_plyty) {
+	public Power get(int id_zasilacza) {
 		try {
 
-			getZasilaczByIdStatement.setInt(1, id_plyty);
+			getZasilaczByIdStatement.setInt(1, id_zasilacza);
 			ResultSet rs = getZasilaczByIdStatement.executeQuery();
 			while (rs.next()) {
 				return new Power(rs.getString("nazwa_firmy"),

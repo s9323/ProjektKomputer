@@ -65,9 +65,9 @@ public class Disk<T> extends Parts<T>{
 
 
 	@Override	
-	public String about(String firma) 
+	public String about(String nazwa_firmy) 
 	{
-		return comp.about(firma) + "DYSK" + firma ;	
+		return comp.about(nazwa_firmy) + "DYSK" + nazwa_firmy ;	
 	}	
 	
 	public double cena()

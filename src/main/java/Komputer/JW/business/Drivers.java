@@ -55,9 +55,9 @@ public class Drivers<T> extends Parts<T>{
 	
 	
 	@Override	
-	public String about(String firma) 
+	public String about(String nazwa_firmy) 
 	{
-		return comp.about(firma) + "STACJA DYSKÓW" + firma ;	
+		return comp.about(nazwa_firmy) + "STACJA DYSKÓW" + nazwa_firmy ;	
 	}	
 	
 	public double cena()
